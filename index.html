@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+	<style>
+		body {margin:0;background:white;}
+		a {text-decoration:none;color:white;}
+		.menu-circle-button-container {position:absolute;width:100vw;left:0;height:100vh;top:0;display:none;background:rgba(0,0,0,0.8);}
+		
+		@keyframes cont-appear {from {background:rgba(0,0,0,0);}to {background:rgba(0,0,0,0.8);}}
+		
+		@keyframes cont-disappear {from {background:rgba(0,0,0,0.8);}to {background:rgba(0,0,0,0);}}
+		
+		@keyframes hidden-element-anim {
+			from {margin-bottom:60%;}
+			to {margin-bottom:0%;}
+		}
+		@keyframes hidden-element-anim-2 {
+			from {margin-bottom:0%;}
+			to {margin-bottom:100%;}
+		}
+		.circle-button{z-index:1;background-color:red;color:white;font-weight:bold;width:150px;position:absolute;right:5%;bottom:3%;border-radius:50%;height:150px;}
+		#button-text {position:absolute;left:30%;top:20%;font-size:5em;}
+
+		.element-container {width:90%;margin:0 auto;margin-top:10%;}
+		.main-element {transition:0.3s ease-in;border-radius:60px 0 60px 0;text-align:center;padding-top:5%;padding-bottom:5%;margin-bottom:10%;}
+		#element-title {font-family:'roboto';color:white;font-size:4em;font-weight:bold;}
+		
+		.hidden-element {height:100px;}
+	</style>
+
+ </head>
+ <body>
+	
+	<!-- PLACE Website HERE-->
+	
+	<div class="menu-circle-button-container">
+		
+		<div class="element-container">
+			
+			<div class="hidden-element">&nbsp;</div>
+
+			<a href="#"><div class="main-element" style="background-color:#d42231;">
+				<label id="element-title">
+					Place Text 1 Here
+				</label>
+			</div></a>
+
+			
+			<a href="#"><div class="main-element" style="background-color:#0395d9;">
+				<label id="element-title">
+					Place Text 2 Here
+				</label>
+			</div></a>
+			
+			<a href="#"><div class="main-element" style="background-color:#0fd502;">
+				<label id="element-title">
+					Place Text 3 Here
+				</label>
+			</div></a>
+			
+			<a href="#"><div class="main-element" style="background-color:#e9b004;">
+				<label id="element-title">
+					Place Text 4 Here
+				</label>
+			</div></a>
+		</div>	
+	</div>
+
+	<div class="circle-button">
+		<label id="button-text"><i id="button-text-i" class="ion-android-menu"></i></label>
+	</div>
+
+<script>
+
+	var trigger = 0;
+	var button = document.getElementById("button-text");
+	var btntext = document.getElementById("button-text-i");
+	var container = document.getElementsByClassName("menu-circle-button-container")[0];
+	var hiddenelement = document.getElementsByClassName("hidden-element")[0];
+	button.onclick = function() {
+		btntext.classList.toggle("ion-close");
+		
+		if(trigger == 0) {
+			container.style.display = "block";
+			container.style.animation = "cont-appear 0.3s";
+			hiddenelement.style.animation = "hidden-element-anim 0.3s";
+			for(i=0;i<4;++i) {
+				document.getElementsByClassName("main-element")[i].style.opacity = "1";
+			}
+			trigger = 1;
+		}
+		else {
+			container.style.animation = "cont-disappear 0.3s";
+			setTimeout(function() {container.style.display = "none"; }, 200);
+			hiddenelement.style.animation = "hidden-element-anim-2 0.3s";
+			for(i=0;i<4;++i) {
+				document.getElementsByClassName("main-element")[i].style.opacity = "0";
+			}
+			trigger = 0;
+		}
+	}
+</script>
+
+ </body>
+
+</html>
