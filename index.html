@@ -2,52 +2,59 @@
 <html lang="en">
  <head>
   <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
   <title>Document</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@2.0.1/css/ionicons.min.css">
-  <link rel="stylesheet" href="./menubar.css">
+	<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<style>
+	body {margin:0;}
+		.main-container {opacity:0;transition:opacity 300ms ease-in;display:none;position:absolute;width:100%;height:100%;overflow:hidden;background:rgba(0,0,0,0.6);display:block;}
+		.show {opacity:1;display:block;transition:opacity 300ms ease-in;}
+
+		.circle-menubar-button {position:absolute;z-index:1;text-align:center;border-radius:50%;background-color:red;width:12%;padding: 2em 1em 2em 1em;bottom:4%;right:5%;}
+		#menubar-button  {color:white;font-size:5em;}
+
+		.main-element {width:90%;font-family:'roboto';border-radius:50px 0 50px 0;padding:1em 0 1em 0;transition:transform 300ms linear;margin:0 auto;text-align:center;color:white;transform:translateY(100vh);margin-bottom:10%;}
+		#main-element-title {font-size:5em;}
+		.load {transform: none;transition:transform 300ms linear;}
+		.element-container-sub {margin-top:10%;}
+	</style>
 
  </head>
  <body>
+  
+	<div class="circle-menubar-button">
+		<label id="menubar-button"><i id="btn-text" class="ion-navicon-round"></i></label>
+	</div>
 
-	<div class="menu-circle-button-container">
-		<div class="element-container">
-			
-			<a href="#">
+	<div class="main-container">
+
+		<div class="element-container-sub">
+		
 			<div class="main-element" style="background-color:#d42231;">
-			<label id="element-title">Place Text 1 Here</label>
+				<label id="main-element-title">Sample Event 1</label>
 			</div>
-			</a>
-
-			<a href="#">
+			
 			<div class="main-element" style="background-color:#0395d9;">
-			<label id="element-title">Place Text 2 Here</label>
+				<label id="main-element-title">Sample Event 2</label>
 			</div>
-			</a>
 			
-			<a href="#">
 			<div class="main-element" style="background-color:#0fd502;">
-			<label id="element-title">Place Text 3 Here</label>
+				<label id="main-element-title">Sample Event 3</label>
 			</div>
-			</a>
 			
-			<a href="#">
 			<div class="main-element" style="background-color:#e9b004;">
-			<label id="element-title">Place Text 4 Here</label>
+				<label id="main-element-title">Sample Event 4</label>
 			</div>
-			</a>
 
-		</div>	
+		</div>
+
 	</div>
-
-	<div class="circle-button">
-		<label id="button-text"><i id="button-text-i" class="ion-android-menu"></i></label>
-	</div>
-
 
 <script src="./menubar.js"></script>
-</body>
+
+ </body>
 </html>
