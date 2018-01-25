@@ -1,8 +1,11 @@
-	body {margin:0;background:white;}
-		a {text-decoration:none;color:white;}
-		.menu-circle-button-container {transition:0.3s all;opacity:0;position:absolute;width:100vw;left:0;height:100vh;top:0;display:none;background:rgba(0,0,0,0.8);}
-		.circle-button{z-index:1;background-color:red;color:white;font-weight:bold;width:150px;position:absolute;right:5%;bottom:3%;border-radius:50%;height:150px;}
-		#button-text {position:absolute;left:30%;top:20%;font-size:5em;}
-		.element-container {width:90%;margin:0 auto;margin-top:60%;transition:0.3s ease-in;}
-		.main-element {transition:0.3s ease-in;border-radius:60px 0 60px 0;text-align:center;padding-top:5%;padding-bottom:5%;margin-bottom:10%;}
-		#element-title {font-family:'roboto';color:white;font-size:4em;font-weight:bold;}
+body {margin:0;}
+		.main-container {opacity:0;transition:opacity 300ms ease-in;display:none;position:absolute;width:100%;height:100%;overflow:hidden;background:rgba(0,0,0,0.6);display:block;}
+		.show {opacity:1;display:block;transition:opacity 300ms ease-in;}
+
+		.circle-menubar-button {position:absolute;z-index:1;text-align:center;border-radius:50%;background-color:red;width:12%;padding: 2em 1em 2em 1em;bottom:4%;right:5%;}
+		#menubar-button  {color:white;font-size:5em;}
+
+		.main-element {width:90%;font-family:'roboto';border-radius:50px 0 50px 0;padding:1em 0 1em 0;transition:transform 300ms linear;margin:0 auto;text-align:center;color:white;transform:translateY(100vh);margin-bottom:10%;}
+		#main-element-title {font-size:5em;}
+		.load {transform: none;transition:transform 300ms linear;}
+		.element-container-sub {margin-top:10%;}
