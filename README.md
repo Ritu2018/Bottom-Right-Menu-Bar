@@ -1,2 +1,2 @@
-# RITU_Mobile_Version
-The Mobile Version of RITU Website
+# Bottom right menu bar
+*CSS Transitions required to be fixed.
