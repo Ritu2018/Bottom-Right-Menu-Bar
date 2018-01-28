@@ -8,7 +8,7 @@ body {margin:0;}
 		.main-element {width:90%;border-radius:60px 0 60px 0;text-align:center;padding-top:5%;padding-bottom:5%;transition:transform 300ms linear;margin:0 auto;transform:translateY(100vh);margin-bottom:10%;}
 		#main-element-title {font-family:'roboto';color:white;font-size:5em;}
 		.load {transform: none;transition:transform 300ms linear;}
-		.element-container-sub {margin-top:-5%;display:none;}
+		.element-container-sub {margin-top:10%;display:none;}
 		.element-container-pc {width:90%;margin:0 auto;margin-top:15%;display:flex;}
 		.main-element-pc {width:25%;margin:1%;text-align:center;padding-top:2%;padding-bottom:1%;border-radius:30px 0 30px 0;}
 		#main-element-title-pc {color:white;font-family:'roboto';}
