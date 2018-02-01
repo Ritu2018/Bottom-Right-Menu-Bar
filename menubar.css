@@ -4,10 +4,7 @@ body {margin:0;}
 
 		.circle-menubar-button {z-index:1;background-color:red;color:white;font-weight:bold;position:absolute;right:2%;bottom:4%;border-radius:50%;height:60px;width:60px;}
 		#menubar-button  {position:absolute;left:30%;top:20%;font-size:2em;}
-
-		.main-element {width:90%;border-radius:60px 0 60px 0;text-align:center;padding-top:5%;padding-bottom:5%;transition:transform 300ms linear;margin:0 auto;transform:translateY(100vh);margin-bottom:10%;}
-		#main-element-title {font-family:'roboto';color:white;font-size:5em;}
-		.load {transform: none;transition:transform 300ms linear;}
+		
 		.element-container-sub {margin-top:10%;display:none;}
 		.element-container-pc {width:90%;margin:0 auto;margin-top:15%;display:flex;}
 		.main-element-pc {width:25%;margin:1%;text-align:center;padding-top:2%;padding-bottom:1%;border-radius:30px 0 30px 0;}
@@ -15,8 +12,10 @@ body {margin:0;}
 		#main-element-icon {color:white;font-size:6em;display:block;}
 
 		@media screen and (max-width:1300px) {
-			.main-element-pc {display:none;}
-			.element-container-sub {display:block;}
+			.main-element-pc {width:90%;margin:0 auto;margin-bottom:5%;border-radius:60px 0 60px 0;font-size:3em;}
+			.element-container-pc {display:block;margin-top:5%;}
+			
+			.main-container {overflow:scroll;}
 			.circle-menubar-button {height:150px;width:150px;right:3%;bottom:2%;}
 			#menubar-button {font-size:5em;}
 		}
